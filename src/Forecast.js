@@ -146,7 +146,7 @@ class Forecast extends React.Component {
 								<div className="forecast-icon">
 									<img src={forecast.forecastday[2].day.condition.icon} alt="" width="48" />
 								</div>
-								<div className="degree">{this.getMaxTemp(forecast, 1)}<sup>o</sup>F</div>
+								<div className="degree">{this.getMaxTemp(forecast, 2)}<sup>o</sup>F</div>
 								<small>{this.getMinTemp(forecast, 2)}<sup>o</sup></small>
 							</div>
 						</div>
