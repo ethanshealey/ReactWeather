@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/css/main.ed1578e8.chunk.css",
+    "main.js": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/main.4c77ae79.chunk.js",
+    "main.js.map": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/main.4c77ae79.chunk.js.map",
+    "runtime-main.js": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/runtime-main.0c728f63.js",
+    "runtime-main.js.map": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/runtime-main.0c728f63.js.map",
+    "static/js/2.7665cd50.chunk.js": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/2.7665cd50.chunk.js",
+    "static/js/2.7665cd50.chunk.js.map": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/2.7665cd50.chunk.js.map",
+    "static/js/3.31892387.chunk.js": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/3.31892387.chunk.js",
+    "static/js/3.31892387.chunk.js.map": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/3.31892387.chunk.js.map",
+    "index.html": "/ethanshealey/ReactWeather/tree/master/weatherapp/index.html",
+    "static/css/main.ed1578e8.chunk.css.map": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/css/main.ed1578e8.chunk.css.map",
+    "static/js/2.7665cd50.chunk.js.LICENSE.txt": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/js/2.7665cd50.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/ethanshealey/ReactWeather/tree/master/weatherapp/static/media/banner.36e95188.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c728f63.js",
+    "static/js/2.7665cd50.chunk.js",
+    "static/css/main.ed1578e8.chunk.css",
+    "static/js/main.4c77ae79.chunk.js"
+  ]
+}
