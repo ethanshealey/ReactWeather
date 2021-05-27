@@ -1,7 +1,6 @@
 import React from 'react';
 import umbrella from './images/icon-umberella.png'
 import wind from './images/icon-wind.png'
-import { Bones } from "react-bones/lib";
 
 class Forecast extends React.Component {
     constructor(props) {
