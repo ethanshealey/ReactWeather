@@ -34,7 +34,7 @@ function App() {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-8">
-							<p className="colophon">Copyright 2021 Ethan Shealey | Designed by Themezy | All rights reserved</p>
+							<p className="colophon">Copyright 2021 Ethan Shealey | Designed by Themezy | Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a> | All rights reserved</p>
 						</div>
 						<div className="col-md-3 col-md-offset-1">
 							<div className="social-links">

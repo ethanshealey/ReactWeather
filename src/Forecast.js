@@ -8,11 +8,10 @@ class Forecast extends React.Component {
       this.state = {
         error: null,
         isLoaded: false,
-        data: [],
         location: [],
         current: [],
         forecast: [],
-        url: "New York"
+        url: ""
       };
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,13 +23,12 @@ class Forecast extends React.Component {
     }
 
     updateAPI(url) {
-        fetch("http://api.weatherapi.com/v1/forecast.json?key=a60212c2ecf94da9a2101045212705&q=" + url + "&days=7&aqi=no&alerts=no")
+        fetch("https://api.weatherapi.com/v1/forecast.json?key=a60212c2ecf94da9a2101045212705&q=" + url + "&days=7&aqi=no&alerts=no")
         .then(res => res.json())
         .then(
           (result) => {
             this.setState({
               isLoaded: true,
-              data: result,
               location: result.location,
               current: result.current,
               forecast: result.forecast,
@@ -87,7 +85,7 @@ class Forecast extends React.Component {
     }
   
     render() {
-      const { error, isLoaded, data, location, current, forecast } = this.state;
+      const { error, isLoaded, location, current, forecast } = this.state;
       if (error) {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {
@@ -97,14 +95,13 @@ class Forecast extends React.Component {
             <span>
 
             <div className="hero">
-				<div className="container">
-					<form action="#" className="find-location" onSubmit={this.handleSubmit}>
-						<input type="text" placeholder="Find your location..." value={this.state.url} onChange={this.handleChange}/>
-						<input type="submit" value="Find" />
-					</form>
-
-				</div>
-			</div>
+              <div className="container">
+                <form action="#" className="find-location" onSubmit={this.handleSubmit}>
+                  <input type="text" placeholder="Find your location..." value={this.state.url} onChange={this.handleChange}/>
+                  <input type="submit" value="Find" />
+                </form>
+              </div>
+            </div>
 
             <div className="forecast-table">
                 <div className="container">
@@ -115,7 +112,7 @@ class Forecast extends React.Component {
                                 <div className="date">{this.getDate()} {this.getMonth()}</div>
 							</div> 
 							<div className="forecast-content">
-                                <div className="location">{location.name}</div>
+                <div className="location">{location.name}, {location.region}</div>
 								<div className="degree">
 									<div className="num">{current.temp_f}<sup>o</sup>F</div>
 									<div className="forecast-icon">
@@ -136,7 +133,10 @@ class Forecast extends React.Component {
 								</div>
 								<div className="degree">{this.getMaxTemp(forecast, 1)}<sup>o</sup>F</div>
 								<small>{this.getMinTemp(forecast, 1)}<sup>o</sup></small>
-							</div>
+                <br /><br /><br />
+                <span><img src={umbrella} alt="" />{forecast.forecastday[1].day.daily_chance_of_rain}%</span>
+                <br /><br />
+              </div>
 						</div>
 						<div className="forecast">
 							<div className="forecast-header">
@@ -148,7 +148,10 @@ class Forecast extends React.Component {
 								</div>
 								<div className="degree">{this.getMaxTemp(forecast, 2)}<sup>o</sup>F</div>
 								<small>{this.getMinTemp(forecast, 2)}<sup>o</sup></small>
-							</div>
+                <br /><br /><br />
+                <span><img src={umbrella} alt="" />{forecast.forecastday[2].day.daily_chance_of_rain}%</span>
+                <br /><br />
+              </div>
 						</div>
 						
 					</div>

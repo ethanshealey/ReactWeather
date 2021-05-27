@@ -1277,7 +1277,7 @@
          margin-right: 30px; }
        .forecast-container .forecast.today span {
          margin-right: 20px; }
-         .forecast-container .forecast.today span img {
+         .forecast-container .forecast span img {
            margin-right: 5px;
            vertical-align: middle; }
        @media screen and (max-width: 990px) {
