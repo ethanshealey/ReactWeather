@@ -1,6 +1,7 @@
 import React from 'react';
 import umbrella from './images/icon-umberella.png'
 import wind from './images/icon-wind.png'
+import { Bones } from "react-bones/lib";
 
 class Forecast extends React.Component {
     constructor(props) {
@@ -88,9 +89,14 @@ class Forecast extends React.Component {
       const { error, isLoaded, location, current, forecast } = this.state;
       if (error) {
         return <div>Error: {error.message}</div>;
-      } else if (!isLoaded) {
+      } 
+      else if (!isLoaded) {
         return <div>Loading...</div>;
-      } else {
+      } 
+      else if (location === undefined) {
+        window.location.reload(false);
+      }
+      else {
         return (
             <span>
 
