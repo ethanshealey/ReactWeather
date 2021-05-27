@@ -88,7 +88,6 @@ class Forecast extends React.Component {
   
     render() {
       const { error, isLoaded, data, location, current, forecast } = this.state;
-      console.log(data);
       if (error) {
         return <div>Error: {error.message}</div>;
       } else if (!isLoaded) {
@@ -97,9 +96,9 @@ class Forecast extends React.Component {
         return (
             <span>
 
-            <div class="hero">
-				<div class="container">
-					<form action="#" class="find-location" onSubmit={this.handleSubmit}>
+            <div className="hero">
+				<div className="container">
+					<form action="#" className="find-location" onSubmit={this.handleSubmit}>
 						<input type="text" placeholder="Find your location..." value={this.state.url} onChange={this.handleChange}/>
 						<input type="submit" value="Find" />
 					</form>
@@ -107,19 +106,19 @@ class Forecast extends React.Component {
 				</div>
 			</div>
 
-            <div class="forecast-table">
-                <div class="container">
-					<div class="forecast-container">
-						<div class="today forecast">
-							<div class="forecast-header">
-								<div class="day" id="day">{this.getDay()}</div>
-                                <div class="date">{this.getDate()} {this.getMonth()}</div>
+            <div className="forecast-table">
+                <div className="container">
+					<div className="forecast-container">
+						<div className="today forecast">
+							<div className="forecast-header">
+								<div className="day" id="day">{this.getDay()}</div>
+                                <div className="date">{this.getDate()} {this.getMonth()}</div>
 							</div> 
-							<div class="forecast-content">
-                                <div class="location">{location.name}</div>
-								<div class="degree">
-									<div class="num">{current.temp_f}<sup>o</sup>F</div>
-									<div class="forecast-icon">
+							<div className="forecast-content">
+                                <div className="location">{location.name}</div>
+								<div className="degree">
+									<div className="num">{current.temp_f}<sup>o</sup>F</div>
+									<div className="forecast-icon">
 										<img src={current.condition.icon} alt="" />
 									</div>	
 								</div>
@@ -127,27 +126,27 @@ class Forecast extends React.Component {
 								<span><img src={wind} alt="" />{forecast.forecastday[0].day.maxwind_mph} mph</span>
 							</div>
 						</div>
-						<div class="forecast">
-							<div class="forecast-header">
-								<div class="day">{this.getDay(1)}</div>
+						<div className="forecast">
+							<div className="forecast-header">
+								<div className="day">{this.getDay(1)}</div>
 							</div> 
-							<div class="forecast-content">
-								<div class="forecast-icon">
+							<div className="forecast-content">
+								<div className="forecast-icon">
 									<img src={forecast.forecastday[1].day.condition.icon} alt="" width="48" /> 
 								</div>
-								<div class="degree">{this.getMaxTemp(forecast, 1)}<sup>o</sup>F</div>
+								<div className="degree">{this.getMaxTemp(forecast, 1)}<sup>o</sup>F</div>
 								<small>{this.getMinTemp(forecast, 1)}<sup>o</sup></small>
 							</div>
 						</div>
-						<div class="forecast">
-							<div class="forecast-header">
-								<div class="day">{this.getDay(2)}</div>
+						<div className="forecast">
+							<div className="forecast-header">
+								<div className="day">{this.getDay(2)}</div>
 							</div> 
-							<div class="forecast-content">
-								<div class="forecast-icon">
+							<div className="forecast-content">
+								<div className="forecast-icon">
 									<img src={forecast.forecastday[2].day.condition.icon} alt="" width="48" />
 								</div>
-								<div class="degree">{this.getMaxTemp(forecast, 1)}<sup>o</sup>F</div>
+								<div className="degree">{this.getMaxTemp(forecast, 1)}<sup>o</sup>F</div>
 								<small>{this.getMinTemp(forecast, 2)}<sup>o</sup></small>
 							</div>
 						</div>

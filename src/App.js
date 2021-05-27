@@ -11,33 +11,33 @@ library.add(fab)
 
 function App() {
   return (
-		<div class="site-content">
-			<div class="site-header">
-				<div class="container">
-					<a href="index.html" class="branding">
-						<img src={logo} alt="" class="logo" />
-						<div class="logo-type">
-							<h1 class="site-title">ReactWeather</h1>
-							<small class="site-description">Created by Ethan Shealey</small>
+		<div className="site-content">
+			<div className="site-header">
+				<div className="container">
+					<a href="index.html" className="branding">
+						<img src={logo} alt="" className="logo" />
+						<div className="logo-type">
+							<h1 className="site-title">ReactWeather</h1>
+							<small className="site-description">Created by Ethan Shealey</small>
 						</div>
 					</a>
 
 					
-					<div class="mobile-navigation"></div>
+					<div className="mobile-navigation"></div>
 
 				</div>
 			</div> 
 			
 			<Forecast />
 
-			<footer class="site-footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8">
-							<p class="colophon">Copyright 2021 Ethan Shealey | Designed by Themezy | All rights reserved</p>
+			<footer className="site-footer">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-8">
+							<p className="colophon">Copyright 2021 Ethan Shealey | Designed by Themezy | All rights reserved</p>
 						</div>
-						<div class="col-md-3 col-md-offset-1">
-							<div class="social-links">
+						<div className="col-md-3 col-md-offset-1">
+							<div className="social-links">
 								<a href="https://github.com/ethanshealey"><i><FontAwesomeIcon icon={['fab', 'github']} /></i></a>&nbsp;&nbsp;
 								<a href="https://www.linkedin.com/in/ethan-shealey/"><i><FontAwesomeIcon icon={['fab', 'linkedin']} /></i></a>&nbsp;&nbsp;
 								<a href="mailto:ethan.shealey@gmail.com"><i><FontAwesomeIcon icon={faEnvelope} /></i></a>&nbsp;&nbsp;
