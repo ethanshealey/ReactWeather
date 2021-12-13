@@ -1,6 +1,6 @@
 {
   "name": "reactweather",
-  "homepage": "https://ethanshealey.github.io/ReactWeather/",
+  "homepage": "https://weather.ethanshealey.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
